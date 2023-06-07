@@ -1,0 +1,205 @@
+%-------------------------
+% Resume in Latex
+% Author : Andrew Kimkiang Heng
+% Based on: https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape Andrew K. Heng} \\ \vspace{1pt}
+    \small (831) 854-6642 $|$ Santa Cruz, CA $|$ \href{mailto:andrewhength@gmail.com}{\underline{andrewhength@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/andrewhength}{\underline{linkedin.com/in/andrewhength}} $|$
+    \href{https://github.com/andrewhength}{\underline{github.com/andrewhength}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+
+\resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {University of California, Santa Cruz}{Santa Cruz, CA}
+      {B.S. Computer Engineering $|$ Concentration: Digital Hardware $|$ GPA: 3.2}{June 2023}
+    \resumeItemListStart
+    \resumeItem{Achievements: Undergraduate Dean's Scholarship; Dean's Honors: Spring 2019, Winter 2023}
+    \resumeItem{Affiliations: Acquire A Cappella (President)}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C, C++, Python, MATLAB, VHDL, Verilog, RISC-V, Javascript} \\
+     \textbf{Software \& OS}{: Vivado, SOLIDWORKS, PSpice, KiCad, Linux, Git, Fusion 360, Photoshop, Premiere Pro} \\
+     \textbf{Additional}{: Soldering, Digital Circuit Design, Oscilloscope, Signal Generator, Product prototyping} \\
+     \textbf{Languages}{: English, Thai, Spanish (Elementary)}
+
+    }}
+ \end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubHeadingListStart
+    
+    \resumeProjectHeading
+        {\textbf{Portable Climate Display} $|$ \emph{C++, KiCad, Cura, Fusion 360}}{Mar. 2023}
+        \resumeItemListStart
+            \resumeItem{Prototyped a device that displays room temperature, humidity, and CO2 levels on an LED matrix display}
+            \resumeItem{Fabricated prototype by writing C++ code on ESP32 microcontroller}
+            \resumeItem{Used KiCad to create custom PCB, along with custom 3D printed enclosure}
+        \resumeItemListEnd
+
+
+        \resumeProjectHeading
+        {\textbf{\href{https://slugpoints.tech}{slugpoints.tech Website}} $|$ \emph{Hackathon Winner, Javascript, CSS, HTML}}{Feb. 2023}
+        \resumeItemListStart
+            \resumeItem{Developed dining hall swipe counting website for UCSC students}
+            \resumeItem{Worked in a team of 4 to develop and deliver for \href{https://devpost.com/software/how-many-f-ing-slug-points-should-i-have}{CruzHacks 2023} Hackathon within 48 hours}
+            \resumeItem{Won ``Best Slug Hack" category award}
+
+        \resumeItemListEnd
+    
+    \resumeProjectHeading
+        {\textbf{FPGA Game ``Frog Frenzy"} $|$ \emph{Verilog, Vivado}}{May 2022 -- June 2022}
+        \resumeItemListStart
+            \resumeItem{Developed and implemented a clone of video game Flappy Bird using Basys 3 Artix-7 FPGA}
+            \resumeItem{Programmed a VGA display driver in Verilog through Vivado, interfaced with VGA, 7-segment display and LEDs}
+            \resumeItem{Learned the importance of specializing individual component I/O by making modules and interconnecting with a top-level module}
+        \resumeItemListEnd
+
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Tech Camp Instructor}{June 2023 -- Aug. 2023}
+      {Integem Inc.}{Cupertino, CA}
+      \resumeItemListStart
+        \resumeItem{Guided young students in various disciplines, Computer Science and Coding, Robotics and Engineering, and Augmented Reality (AR) technology}
+        \resumeItem{Facilitated a creative and interactive learning environment, focusing on coding AR technology}
+        \resumeItem{Developed expertise in Holographic AR coding (2D and 3D), Python coding, and AI and Robotics Engineering through training process.}
+    \resumeItemListEnd
+      
+    \resumeSubheading
+      {Student Life and University Guide}{Dec. 2021 -- June 2023}
+      {UC Santa Cruz Admissions}{Santa Cruz, CA}
+      \resumeItemListStart
+        \resumeItem{Provided walking tours of UCSC campus to prospective students, and assisted tour and event coordinators with international and administrative tasks}
+        \resumeItem{Developed excellent communication and organizational skills, as well as finding new methods to understand the university's history, programs, and resources}
+        \resumeItem{Proven ability to handle large groups and answer complex questions. Strong ability to work in a team and collaborate with other staff}
+      \resumeItemListEnd
+
+    
+    \resumeSubheading
+      {Class Grader / Reader: CSE 80N Introduction to Networking}{Mar. 2022 -- June 2022}
+      {UCSC Baskin School of Engineering}{Santa Cruz, CA}
+      \resumeItemListStart
+        \resumeItem{Assistant to professor and graduate students as class grader for CSE 80N: Introduction to Networking}
+        \resumeItem{Evaluated and provided detailed feedback on student assignments and assessments}
+        \resumeItem{Worked both independently and under guidance of professor and graduate instructors}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
